@@ -1,0 +1,9 @@
+compute_engine_instance:
+  image_project: cirrus-images
+  image: family/docker-builder
+  platform: linux
+  cpu: 8
+  memory: 8G
+mutations_task: 
+  run_script:
+    - docker run --rm aureleoules/bcm-worker --server https://bcm.home.aureleoules.com
